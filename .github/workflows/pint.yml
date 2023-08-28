@@ -1,0 +1,19 @@
+name: Pint
+run-name: Checking style for ${{ github.ref_name }}
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Setup PHP
+        id: setup-php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: laravel/pint,
+      - name: Check code style
+        run: pint --test
