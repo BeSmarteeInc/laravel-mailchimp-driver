@@ -1,18 +1,18 @@
-# Laravel Mandrill Driver
+# Laravel Mailchimp Driver
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/besmarteeinc/laravel-mandrill-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mandrill-driver)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mandrill-driver/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/besmarteeinc/laravel-mandrill-driver/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mandrill-driver/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/besmarteeinc/laravel-mandrill-driver/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/besmarteeinc/laravel-mandrill-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mandrill-driver)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/besmarteeinc/laravel-mailchimp-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mailchimp-driver)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mailchimp-driver/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/besmarteeinc/laravel-mailchimp-driver/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mailchimp-driver/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/besmarteeinc/laravel-mailchimp-driver/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/besmarteeinc/laravel-mailchimp-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mailchimp-driver)
 
-A simple Mandrill mail driver package for Laravel extending the abstract mail transport functionality.
+A simple Mailchimp mail driver package for Laravel extending the abstract mail transport functionality.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require besmarteeinc/laravel-mandrill-driver
+composer require besmarteeinc/laravel-mailchimp-driver
 ```
 
 In your `services.php` config file, add the following configuration:
@@ -23,7 +23,7 @@ In your `services.php` config file, add the following configuration:
 return [
     // ...
 
-    'mandrill' => [
+    'mailchimp' => [
         'secret' => env('MANDRILL_KEY'),
     ],
 ];
@@ -34,7 +34,7 @@ Then set your `MANDRILL_KEY` in your env.
 MANDRILL_KEY=<your key>
 ```
 
-Add the Mandrill mailer to your `config/mail.php`:
+Add the Mailchimp mailer to your `config/mail.php`:
 
 ```php
 // config/mail.php
@@ -45,8 +45,8 @@ return [
     'mailers' => [
         // ...
 
-        'mandrill' => [
-            'transport' => 'mandrill',
+        'mailchimp' => [
+            'transport' => 'mailchimp',
         ],
     ],
 
@@ -54,16 +54,16 @@ return [
 ]
 ```
 
-Set the `MAIL_MAILER` value in your env to `mandrill` to enable it:
+Set the `MAIL_MAILER` value in your env to `mailchimp` to enable it:
 ```php
-MAIL_MAILER=mandrill
+MAIL_MAILER=mailchimp
 ```
 
 ## Usage
 
 ```php
-$laravelMandrillDriver = new BeSmarteeInc\LaravelMandrillDriver();
-echo $laravelMandrillDriver->echoPhrase('Hello, BeSmarteeInc!');
+$laravelMailchimpDriver = new BeSmarteeInc\LaravelMailchimpDriver();
+echo $laravelMailchimpDriver->echoPhrase('Hello, BeSmarteeInc!');
 ```
 
 ## Testing

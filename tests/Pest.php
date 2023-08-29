@@ -1,5 +1,5 @@
 <?php
 
-use BeSmarteeInc\LaravelMandrillDriver\Tests\TestCase;
+use BeSmarteeInc\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
