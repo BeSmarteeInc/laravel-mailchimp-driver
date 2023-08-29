@@ -1,12 +1,12 @@
 {
-    "name": "besmarteeinc/laravel-mandrill-driver",
-    "description": "This is my package laravel-mandrill-driver",
+    "name": "besmarteeinc/laravel-mailchimp-driver",
+    "description": "This is my package laravel-mailchimp-driver",
     "keywords": [
         "BeSmarteeInc",
         "laravel",
-        "laravel-mandrill-driver"
+        "laravel-mailchimp-driver"
     ],
-    "homepage": "https://github.com/besmarteeinc/laravel-mandrill-driver",
+    "homepage": "https://github.com/besmarteeinc/laravel-mailchimp-driver",
     "license": "MIT",
     "authors": [
         {
@@ -17,8 +17,9 @@
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "mailchimp/transactional": "^1.0",
+        "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -30,19 +31,17 @@
     },
     "autoload": {
         "psr-4": {
-            "BeSmarteeInc\\LaravelMandrillDriver\\": "src/",
-            "BeSmarteeInc\\LaravelMandrillDriver\\Database\\Factories\\": "database/factories/"
+            "BeSmarteeInc\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BeSmarteeInc\\LaravelMandrillDriver\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "BeSmarteeInc\\Tests\\": "tests/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-mandrill-driver --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-mailchimp-driver --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -67,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BeSmarteeInc\\LaravelMandrillDriver\\LaravelMandrillDriverServiceProvider"
+                "BeSmarteeInc\\LaravelMailchimpDriver\\LaravelMailchimpDriverServiceProvider"
             ],
             "aliases": {
-                "LaravelMandrillDriver": "BeSmarteeInc\\LaravelMandrillDriver\\Facades\\LaravelMandrillDriver"
+                "LaravelMailchimpDriver": "BeSmarteeInc\\LaravelMailchimpDriver\\Facades\\LaravelMailchimpDriver"
             }
         }
     },
