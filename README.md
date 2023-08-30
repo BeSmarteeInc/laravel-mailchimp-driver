@@ -88,7 +88,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Anthony Diep](https://github.com/BeSmarteeInc)
+- [Jeffrey Pau](https://github.com/jpau-besmartee)
 - [All Contributors](../../contributors)
 
 ## License

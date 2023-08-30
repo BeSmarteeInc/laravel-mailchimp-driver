@@ -1,6 +1,6 @@
 {
     "name": "besmarteeinc/laravel-mailchimp-driver",
-    "description": "This is my package laravel-mailchimp-driver",
+    "description": "Custom Laravel Mailchimp mail driver",
     "keywords": [
         "BeSmarteeInc",
         "laravel",
@@ -10,8 +10,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Anthony Diep",
-            "email": "anthony@besmartee.com",
+            "name": "Jeffrey Pau",
+            "email": "jeffrey.pau@besmartee.com",
             "role": "Developer"
         }
     ],
