@@ -24,14 +24,14 @@ return [
     // ...
 
     'mailchimp' => [
-        'secret' => env('MANDRILL_KEY'),
+        'secret' => env('MAILCHIMP_KEY'),
     ],
 ];
 ```
 
-Then set your `MANDRILL_KEY` in your env.
+Then set your `MAILCHIMP_KEY` in your env.
 ```php
-MANDRILL_KEY=<your key>
+MAILCHIMP_KEY=<your key>
 ```
 
 Add the Mailchimp mailer to your `config/mail.php`:
@@ -57,13 +57,6 @@ return [
 Set the `MAIL_MAILER` value in your env to `mailchimp` to enable it:
 ```php
 MAIL_MAILER=mailchimp
-```
-
-## Usage
-
-```php
-$laravelMailchimpDriver = new BeSmarteeInc\LaravelMailchimpDriver();
-echo $laravelMailchimpDriver->echoPhrase('Hello, BeSmarteeInc!');
 ```
 
 ## Testing

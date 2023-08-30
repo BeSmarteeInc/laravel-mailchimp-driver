@@ -18,8 +18,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/contracts": "^10.0",
-        "mailchimp/transactional": "^1.0",
-        "spatie/laravel-package-tools": "^1.14.0"
+        "mailchimp/transactional": "^1.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -66,11 +65,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BeSmarteeInc\\LaravelMailchimpDriver\\LaravelMailchimpDriverServiceProvider"
-            ],
-            "aliases": {
-                "LaravelMailchimpDriver": "BeSmarteeInc\\LaravelMailchimpDriver\\Facades\\LaravelMailchimpDriver"
-            }
+                "BeSmarteeInc\\MailchimpServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
