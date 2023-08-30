@@ -1,15 +1,24 @@
 # Laravel Mailchimp Driver
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/besmarteeinc/laravel-mailchimp-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mailchimp-driver)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mailchimp-driver/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/besmarteeinc/laravel-mailchimp-driver/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/besmarteeinc/laravel-mailchimp-driver/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/besmarteeinc/laravel-mailchimp-driver/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/besmarteeinc/laravel-mailchimp-driver.svg?style=flat-square)](https://packagist.org/packages/besmarteeinc/laravel-mailchimp-driver)
-
 A simple Mailchimp mail driver package for Laravel extending the abstract mail transport functionality.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via composer by adding this to your composer.json:
+
+```json
+{
+    "repositories": [
+        // ...
+        {
+            "type": "github",
+            "url": "https://github.com/besmarteeinc/laravel-mailchimp-driver.git"
+        }
+    ]
+}
+```
+
+Then run:
 
 ```bash
 composer require besmarteeinc/laravel-mailchimp-driver
