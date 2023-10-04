@@ -1,4 +1,4 @@
-name: run-tests
+name: Pest
 
 on:
   push:
@@ -47,4 +47,6 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
+        env:
+          MAILCHIMP_SECRET: ${{ secrets.MAILCHIMP_SECRET }}
         run: vendor/bin/pest --ci
