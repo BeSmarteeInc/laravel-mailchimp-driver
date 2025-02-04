@@ -21,6 +21,6 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         $app['config']->set('mail.driver', 'mailchimp');
-        $app['config']->set('services.mailchimp.secret', 'md-eBuhGl2jFKyoX6C9rcBv8g'); // dummy account
+        $app['config']->set('mailchimp.secret', env('MAILCHIMP_SECRET')); // dummy account
     }
 }
