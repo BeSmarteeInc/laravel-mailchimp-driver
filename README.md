@@ -46,8 +46,6 @@ MAILCHIMP_KEY=<your key>
 Add the Mailchimp mailer to your `config/mail.php`:
 
 ```php
-// config/mail.php
-
 return [
     // ...
 
@@ -57,6 +55,7 @@ return [
         'mailchimp' => [
             'transport' => 'mailchimp',
         ],
+
     ],
 
     // ...
