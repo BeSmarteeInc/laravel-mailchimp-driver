@@ -10,7 +10,12 @@ class TestMailable extends Mailable
 {
     public function build()
     {
-        return $this->from('no-reply@besmartee.com')->html('Hello World');
+        return $this->from('dev@besmartee.com')
+            ->html('Hello World')
+            ->cc('cc@besmartee.com', 'CC BeSmartee')
+            ->bcc('bcc@besmartee.com')
+            ->replyTo('reply@besmartee.com')
+            ->attachData('file content', 'test.txt', ['mine' => 'text/plain']);
     }
 }
 

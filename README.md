@@ -24,20 +24,6 @@ Then run:
 composer require besmarteeinc/laravel-mailchimp-driver
 ```
 
-In your `services.php` config file, add the following configuration:
-
-```php
-// config/services.php
-
-return [
-    // ...
-
-    'mailchimp' => [
-        'secret' => env('MAILCHIMP_KEY'),
-    ],
-];
-```
-
 Then set your `MAILCHIMP_KEY` in your env.
 ```php
 MAILCHIMP_KEY=<your key>
@@ -54,6 +40,7 @@ return [
 
         'mailchimp' => [
             'transport' => 'mailchimp',
+            'secret' => env('MAILCHIMP_KEY'),
         ],
 
     ],

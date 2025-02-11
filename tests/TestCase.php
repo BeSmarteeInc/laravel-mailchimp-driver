@@ -20,7 +20,10 @@ class TestCase extends Orchestra
 
     public function getEnvironmentSetUp($app)
     {
-        $app['config']->set('mail.driver', 'mailchimp');
-        $app['config']->set('mailchimp.secret', env('MAILCHIMP_SECRET')); // dummy account
+        $app['config']->set('mail.default', 'mailchimp');
+        $app['config']->set('mail.mailers.mailchimp', [
+            'transport' => 'mailchimp',
+            'secret' => env('MAILCHIMP_SECRET'),
+        ]);
     }
 }

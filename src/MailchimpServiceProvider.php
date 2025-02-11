@@ -15,11 +15,11 @@ class MailchimpServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Mail::extend('mailchimp', function () {
+        Mail::extend('mailchimp', function ($config) {
             $client = new ApiClient;
-            $client->setApiKey(config('mailchimp.secret'));
+            $client->setApiKey($config['secret'] ?? '');
 
-            return new MailchimpTransport($client);
+            return new MailchimpTransport($client, $config);
         });
     }
 }
